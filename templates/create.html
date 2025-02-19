@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Добавление записей
+{% endblock %}
+
+{% block content %}
+<h1>Добавление записей</h1>
+
+<form method="post" class="form-control">
+    <input type="text" name="title" placeholder="Введите название записи" class="form-control"><br>
+    <input type="datetime-local" name="time" placeholder="Введите название записи" class="form-control"><br>
+    <input type="number" name="number_phone" placeholder="Введите номер тедефона" class="form-control"><br>
+    <button class="btn btn-success" type="submit">Добавить</button>
+</form>
+{% endblock %}

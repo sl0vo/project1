@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Все записи
+{% endblock %}
+
+{% block content %}
+<h1>Все записи</h1>
+
+ <div class="row">
+
+    {% for post in posts %}
+    <div class="col-md-6 item">
+      <div class="item-in">
+        <h4>{{ post[2] }}</h4>
+        <div class="seperator"></div>
+        <p>  Номер телефона - {{post[3]}}
+        Дата записи - {{post[4]}}
+            Время записи - {{post[5]}}
+        </p>
+        <a href="{{ url_for('delete', id=post[0]) }}">Удалить запись
+          <i class="fa fa-long-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+     {% endfor %}
+  </div>
+{% endblock %}

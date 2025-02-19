@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Таблица игроков
+{% endblock %}
+
+{% block body %}
+<table>
+    {% for row in rows %}
+        <tr>
+            <td>id</td>
+            <td>name</td>
+            <td>final</td>
+        </tr>
+    {% endfor %}
+    </table>
+{% endblock %}
